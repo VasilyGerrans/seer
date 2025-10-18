@@ -1,0 +1,9 @@
+[submodule "agave"]
+	path = agave
+	url = https://github.com/VasilyGerrans/seer-agave
+[submodule "ui"]
+	path = ui
+	url = https://github.com/VasilyGerrans/seer-ui
+[submodule "demo"]
+	path = demo
+	url = https://github.com/yparf/seer_example
