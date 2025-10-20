@@ -19,7 +19,7 @@ program
         const root = path.resolve(__dirname, "..", "..", "demo");
 
         try {
-            console.log("⚙️ Running Seer transaction...");
+            console.log("⚙️ Building Seer programs...");
             await execa("../cli/bin/build.sh", {
                 cwd: path.join(root),
                 stdio: "inherit"
