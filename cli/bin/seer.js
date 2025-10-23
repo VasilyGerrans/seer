@@ -13,7 +13,7 @@ program
     .version("0.1.0");
 
 program
-    .command("view")
+    .command("run")
     .description("Launch the transaction debugger on localhost")
     .action(async () => {
         const root = path.resolve(__dirname, "..", "..");
@@ -21,10 +21,10 @@ program
         const project_root = path.join(root, "demo");
 
         try {
-            console.log("📦 Ensuring UI dependencies are installed...");
+            console.log("Ensuring UI dependencies are installed...");
             await execa("pnpm", ["install"], { cwd: ui_path });
 
-            console.log("🚀 Starting SEER on http://localhost:3000");
+            console.log("Starting SEER on http://localhost:3000");
             await execa("pnpm", ["start"], {
                 cwd: ui_path,
                 env: {
@@ -33,7 +33,7 @@ program
             });
 
         } catch (err) {
-            console.error("❌ Failed to run SEER:", err.message);
+            console.error("Failed to run SEER:", err.message);
             process.exit(1);
         }
     });
